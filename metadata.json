@@ -1,0 +1,11 @@
+{
+  "tags": [],
+  "name": "Default Dashboard Model",
+  "description": "Test Dashboard Model for OOM",
+  "modelCategory": "MODEL_MONITORING_MODEL",
+  "defaultAssociationRole": "METRICS_MODEL",
+  "frequentlyUsed": true,
+  "custom": {
+    "modelopPackageVersion": "1.0.0"
+  }
+}
