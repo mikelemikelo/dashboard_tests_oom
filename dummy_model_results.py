@@ -1,7 +1,7 @@
 import json
 
 # modelop.metrics
-def metrics(df):
+def metrics(baseline, comparator) -> dict:
 
 	jsonResult = loadJsonFromFilename("dummy_base_mtr.json")
 	dummyDataJson = loadJsonFromFilename("dummy_data_empty.json")
@@ -16,6 +16,6 @@ def loadJsonFromFilename(filename):
 	return fileAsJson
 
 if __name__ == "__main__":
-	result = metrics(None)
+	result = metrics(None,None)
 	for value in result:
 		print(value)
