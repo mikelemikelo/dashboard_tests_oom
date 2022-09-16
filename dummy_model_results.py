@@ -2,11 +2,17 @@ import json
 
 # modelop.metrics
 def metrics(df):
-	filename = "dummy_data_5MB.json"
+
+	jsonResult = loadJsonFromFilename("dummy_base_mtr.json")
+	dummyDataJson = loadJsonFromFilename("dummy_data_5MB.json")
+	jsonResult.update(dummyDataJson)
+	yield jsonResult
+
+def loadJsonFromFilename(filename):
 	with open(filename, "r") as f:
 		contents = f.read()
-	test_results = json.loads(contents)
-	yield test_results
+	fileAsJson = json.loads(contents)
+	return fileAsJson
 
 if __name__ == "__main__":
 	result = metrics(None)
