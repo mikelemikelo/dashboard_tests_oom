@@ -4,9 +4,12 @@ import json
 def metrics(baseline, comparator) -> dict:
 
 	jsonResult = loadJsonFromFilename("dummy_base_mtr.json")
-	dummyDataJson = loadJsonFromFilename("dummy_data_empty.json")
-	dummyDataJson = loadJsonFromFilename("dummy_data_5MB.json")
-	jsonResult.update(dummyDataJson)
+	additionalData = loadJsonFromFilename("dummy_data_empty.json")
+	jsonResult.update(additionalData)
+	additionalData = loadJsonFromFilename("dummy_data_5MB.json")
+	jsonResult.update(additionalData)
+	additionalData = loadJsonFromFilename("dummy_data_3MB.json")
+	jsonResult.update(additionalData)
 	yield jsonResult
 
 def loadJsonFromFilename(filename):
