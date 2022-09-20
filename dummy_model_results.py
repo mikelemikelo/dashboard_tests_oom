@@ -8,7 +8,9 @@ def metrics(baseline, comparator) -> dict:
 	jsonResult.update(additionalData)
 	# additionalData = loadJsonFromFilename("dummy_data_3MB.json")
 	# jsonResult.update(additionalData)
-	additionalData = loadJsonFromFilename("dummy_data_1MB.json")
+	# additionalData = loadJsonFromFilename("dummy_data_1MB.json")
+	# jsonResult.update(additionalData)
+	additionalData = loadJsonFromFilename("dummy_data_2MB.json")
 	jsonResult.update(additionalData)
 	yield jsonResult
 
